@@ -2,7 +2,6 @@
 
 tightness, 5 pixels kinda works
 bottom left is 0,0 top right 1000, 1000
-image is 2000px ^2
 tooltip is just hover text
 
 the temp icons are 30px x 30px
@@ -15,7 +14,7 @@ List of PoIs
 -Scenes
 -Campfires
 
-I gotta finish Locations and Collectables
+I think adding a npc layer would be good
 
 Future Stuff
 -tilemap
