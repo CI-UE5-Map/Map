@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Leaflet Tile Test Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { 
+      height: 800px; 
+      width: 100vw; 
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  var map = L.map('map').setView([0, 0], 2); // Set initial view and zoom level
+
+  // Define the custom tile layer and add it to the map
+  L.tileLayer('assets/mehdem/Mehden_{x}_{y}.png', {
+    maxZoom: 18,
+    tileSize: 256,
+  }).addTo(map);
+
+   // Define the bounds for the map
+   var bounds = L.latLngBounds(
+    L.latLng(-85.0511287798, -180),
+    L.latLng(85.0511287798, 180)
+  );
+
+  // Set the maximum bounds of the map
+  map.setMaxBounds(bounds);
+
+  // Restrict the user from zooming out beyond a certain level
+  map.setMinZoom(2);
+
+  // Define bounds for image overlays
+  var boundsTopRight = L.latLngBounds(
+  L.latLng(0, 0),
+  L.latLng(85.0511287798, 180)
+);
+
+var boundsTopMid = L.latLngBounds(
+  L.latLng(0, -180),
+  L.latLng(85.0511287798, 0)
+);
+
+var boundsTopLeft = L.latLngBounds(
+  L.latLng(0, -180),
+  L.latLng(85.0511287798, 0)
+);
+
+var boundsBottomRight = L.latLngBounds(
+  L.latLng(-85.0511287798, 0),
+  L.latLng(0, 180)
+);
+
+var boundsBottomMid = L.latLngBounds(
+  L.latLng(-85.0511287798, -180),
+  L.latLng(0, 0)
+);
+
+var boundsBottomLeft = L.latLngBounds(
+  L.latLng(-85.0511287798, -180),
+  L.latLng(0, 0)
+);
+
+
+  var imageTopRight = L.imageOverlay('assets/mehden/Mehden_1_3.png', boundsTopRight).addTo(map);
+  var imageTopMid = L.imageOverlay('assets/mehden/Mehden_1_2.png', boundsTopMid).addTo(map);
+  var imageTopLeft = L.imageOverlay('assets/mehden/Mehden_1_1.png', boundsTopLeft).addTo(map);
+  var imageBottomRight = L.imageOverlay('assets/mehden/Mehden_2_3.png', boundsBottomRight).addTo(map);
+  var imageBottomMid = L.imageOverlay('assets/mehden/Mehden_2_2.png', boundsBottomMid).addTo(map);
+  var imageBottomLeft = L.imageOverlay('assets/mehden/Mehden_2_1.png', boundsBottomLeft).addTo(map);
+
+  // Add markers or other features as needed
+</script>
+
+</body>
+</html>
+
+
+
+
+<!--     var imageTopRight = L.imageOverlay('assets/mehden/Mehden_1_3.png', boundsTopRight).addTo(map);
+    var imageTopMid = L.imageOverlay('assets/mehden/Mehden_1_2.png', boundsBottomLeft).addTo(map);
+    var imageTopLeft = L.imageOverlay('assets/mehden/Mehden_1_1.png', boundsTopRight).addTo(map);
+    var imageBottomRight = L.imageOverlay('assets/mehden/Mehden_2_3.png', boundsBottomLeft).addTo(map);
+    var imageBottomMid = L.imageOverlay('assets/mehden/Mehden_2_2.png', boundsTopRight).addTo(map);
+    var imageBottomLeft = L.imageOverlay('assets/mehden/Mehden_2_1.png', boundsBottomLeft).addTo(map); -->
