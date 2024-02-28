@@ -22,14 +22,14 @@
 
   // Define the custom tile layer and add it to the map
   L.tileLayer('assets/mehdem/Mehden_{x}_{y}.png', {
-    maxZoom: 18,
+    maxZoom: 24,
     tileSize: 256,
   }).addTo(map);
 
    // Define the bounds for the map
    var bounds = L.latLngBounds(
-    L.latLng(-100, -200),
-    L.latLng(100, 200)
+    L.latLng(-100, -400),
+    L.latLng(100, 400)
   );
 
   // Set the maximum bounds of the map
@@ -38,8 +38,9 @@
   // Restrict the user from zooming out beyond a certain level
   map.setMinZoom(2);
 
-  // Define bounds for image overlays
-  var boundsTopRight = L.latLngBounds(
+
+// Define bounds for image overlays
+var boundsTopRight = L.latLngBounds(
   L.latLng(0, 0),
   L.latLng(100, 200)
 );
@@ -50,8 +51,8 @@ var boundsTopMid = L.latLngBounds(
 );
 
 var boundsTopLeft = L.latLngBounds(
-  L.latLng(0, -200),
-  L.latLng(100, 0)
+  L.latLng(0, -400),
+  L.latLng(100, -200)
 );
 
 var boundsBottomRight = L.latLngBounds(
@@ -65,10 +66,9 @@ var boundsBottomMid = L.latLngBounds(
 );
 
 var boundsBottomLeft = L.latLngBounds(
-  L.latLng(-100, -200),
-  L.latLng(0, 0)
+  L.latLng(-100, -400),
+  L.latLng(0, -200)
 );
-
 
   var imageTopRight = L.imageOverlay('assets/mehden/Mehden_1_3.png', boundsTopRight).addTo(map);
   var imageTopMid = L.imageOverlay('assets/mehden/Mehden_1_2.png', boundsTopMid).addTo(map);
