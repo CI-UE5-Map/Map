@@ -69,6 +69,7 @@
         townIcon = new MapIcon({iconUrl: 'assets/icons/town.png'}),
         fertilityIcon = new MapIcon({iconUrl: 'assets/icons/ShrineFertility.png'}),
         virilityIcon = new MapIcon({iconUrl: 'assets/icons/ShrineVirility.png'}),
+        cosmeticIcon = new MapIcon({iconUrl: 'assets/icons/Cosmetic.png'}),
         templeIcon = new MapIcon({iconUrl: 'assets/icons/Temple.png'}),
         villageIcon = new MapIcon({iconUrl: 'assets/icons/Village.png'}),
         caveIcon = new MapIcon({iconUrl: 'assets/icons/Cave.png'}),
@@ -140,7 +141,7 @@
         // Markers
         var markers = [
             // CAMPFIRES
-            L.marker([415, 540], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //1, Tal'Senet Coast
+            L.marker([412, 542], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //1, Tal'Senet Coast
             L.marker([450, 410], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //2 Mehden southeast coast
             L.marker([404, 325], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //3 the Mehden Village 
             L.marker([430, 285], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //4 Mehden Southern Temple
@@ -148,55 +149,56 @@
             L.marker([405, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //6 Rampant Lioness
             L.marker([525, 490], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //7 needs fixing, Moswen's
             L.marker([545, 685], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //8 Pleasure Island
-            L.marker([630, 515], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //9  Cloister of Nuriah
+            L.marker([650, 515], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //9  Cloister of Nuriah 
             L.marker([580, 335], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //10 farmer's
-            L.marker([1040, 795], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire 11`), //11
-            L.marker([1470, 705], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire 12`), //12
+            L.marker([1040, 795], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //11 HR South
+            L.marker([1205, 740], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //12 HR North
+            L.marker([305, 405], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //13 Pleaure Gardens
 
 
             // SCENES
-            L.marker([695, 625], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`),
-            L.marker([310, 590], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Samia" target="_blank">Samia</a>`),
-            L.marker([195, 425], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Alkippe" target="_blank">Alkippe</a>`),
-            L.marker([185, 425], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Iva" target="_blank">Iva</a>`),
-            L.marker([175, 425], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Khyras" target="_blank">Iva</a>`),
-            L.marker([510, 560], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Moswen" target="_blank">Moswen</a>`),
-            L.marker([540, 875], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Adept" target="_blank">The Adepts</a>`),
+            L.marker([615, 512], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`),
+            L.marker([386, 495], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Samia" target="_blank">Samia</a>`),
+            L.marker([303, 426], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Alkippe" target="_blank">Alkippe</a>`),
+            L.marker([305, 425], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Iva" target="_blank">Iva</a>`),
+            L.marker([305, 428], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Khyras" target="_blank">Khyras</a>`),
+            L.marker([520, 487], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Moswen" target="_blank">Moswen</a>`),
+            L.marker([553, 673], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Adept" target="_blank">The Adepts</a>`),
            
             // EQUIPMENT   
-            L.marker([800, 725], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Bows/Anubite_Bow" target="_blank">Anubite Bow</a>`),
-            L.marker([350, 775], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Lion_Blade" target="_blank">Lion Blade</a>`),
-            L.marker([500, 500], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Raider_Talon" target="_blank">Raider Talon</a>`),
-            L.marker([740, 500], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Viper's_Kiss" target="_blank">Viper's Kiss</a>`),
-            L.marker([300, 595], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Slaver's_Cudgel" target="_blank">Slaver's Cudgel</a>`),
-            L.marker([800, 738], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/2h/Legionnaire's_Kopis" target="_blank">Legionnaire's Kopis</a>`),
-            L.marker([350, 365], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Aadi's_Hide" target="_blank">Aadi's Hide</a>`),
-            L.marker([455, 375], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Torment's_Vigil" target="_blank">Torment's Vigil</a>`),
+            L.marker([720, 585], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Bows/Anubite_Bow" target="_blank">Anubite Bow</a>`),
+            L.marker([420, 615], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Lion_Blade" target="_blank">Lion Blade</a>`),
+            L.marker([515, 450], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Raider_Talon" target="_blank">Raider Talon</a>`),
+            L.marker([670, 430], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Viper's_Kiss" target="_blank">Viper's Kiss</a>`),
+            L.marker([380, 500], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Slaver's_Cudgel" target="_blank">Slaver's Cudgel</a>`),
+            L.marker([720, 588], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/2h/Legionnaire's_Kopis" target="_blank">Legionnaire's Kopis</a>`),
+            L.marker([450, 365], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Aadi's_Hide" target="_blank">Aadi's Hide</a>`),
+            L.marker([485, 365], {icon: equipmentIcon}).addTo( equipmentLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Torment's_Vigil" target="_blank">Torment's Vigil</a>`),
 
 
             // QUESTS
-            L.marker([655, 685], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`),
-            L.marker([520, 306], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a>`),
-            L.marker([685, 625], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a>`),
+            L.marker([615, 553], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`),
+            L.marker([525, 326], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a>`),
+            L.marker([610, 510], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a>`),
 
             // PoIs, {icon: can change}
             // TAL'SENENT   
-            L.marker([513, 753], {icon: poiIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`),
-            L.marker([513, 765], {icon: poiIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`),
-            L.marker([445, 784], {icon: poiIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Cosmetics</a>`),
-            L.marker([330, 728], {icon: villageIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a>`),
-            L.marker([300, 708], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Tal'Senet Outskirts`),
+            L.marker([520, 600], {icon: fertilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`),
+            L.marker([520, 605], {icon: virilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`),
+            L.marker([470, 620], {icon: cosmeticIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Cosmetics</a>`),
+            L.marker([385, 593], {icon: villageIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a>`),
+            L.marker([375, 573], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Tal'Senet Outskirts`),
 
             // MEHDEN ISLAND
-            L.marker([320, 205], {icon: templeIcon}).addTo(poiLayer).bindPopup(`The Western Temple`),
-            L.marker([353, 303], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Villlage`),
-            L.marker([580, 325], {icon: poiIcon}).addTo(poiLayer).bindPopup(`Mehden Farms`),
-            L.marker([660, 370], {icon: templeIcon}).addTo(poiLayer).bindPopup(`DeadAss No Clue`),
+            L.marker([410, 265], {icon: templeIcon}).addTo(poiLayer).bindPopup(`The Western Temple`),
+            L.marker([414, 325], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Villlage`),
+            L.marker([580, 345], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Farms`),
+            L.marker([660, 420], {icon: templeIcon}).addTo(poiLayer).bindPopup(`DeadAss No Clue`),
             L.marker([500, 400], {icon: caveIcon}).addTo(poiLayer).bindPopup(`Cave`),
             L.marker([515, 400], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Ruin Above Cave`),
             L.marker([513, 553], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Moswen's Village`),
-            L.marker([675, 615], {icon: templeIcon}).addTo(poiLayer).bindPopup(`The Cloister of Nuriah?`),
-            L.marker([733, 753], {icon: poiIcon}).addTo(poiLayer).bindPopup(`North Eastern Place IDK man`),
+            L.marker([675, 615], {icon: templeIcon}).addTo(poiLayer).bindPopup(`The Cloister of Nuriah`),
+            // L.marker([733, 753], {icon: poiIcon}).addTo(poiLayer).bindPopup(`North Eastern Place IDK man`),
 
             // COLLECTABLES
             L.marker([335, 795], {icon: collectablesIcon}).addTo(collectablesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift" target="_blank">Kethra's Gift</a>`),
