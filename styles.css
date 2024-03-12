@@ -1,0 +1,39 @@
+#map {
+    height: 1000px;
+    width: 100% ;
+}
+#filter-controls {
+    /* position: absolute; */
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 40px;
+    z-index: 1000;
+}
+body, a {
+    font-family: 'Roboto', sans-serif;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    font-family: 'Roboto', sans-serif; /* Change 'Roboto' to your desired font */
+}
+#filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+#filter-controls label {
+    flex: 1 0 45%;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    #filter-controls label {
+        flex-basis: 100%;
+    }
+}
