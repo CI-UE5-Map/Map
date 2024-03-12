@@ -38,6 +38,7 @@
         <label><input type="checkbox" id="quest-filter" checked> Quests</label>
         <label><input type="checkbox" id="poi-filter" checked> Points Of Interest</label>
         <label><input type="checkbox" id="equipment-filter" checked> Equipment</label> 
+        <label><input type="checkbox" id="enemy-filter" checked> Enemies</label> 
     </div>
     <div id="map"></div>
 
@@ -75,6 +76,7 @@
         caveIcon = new MapIcon({iconUrl: './assets//Cave.png'}),
         poiIcon = new MapIcon({iconUrl: './assets/poi.png'}),
         collectablesIcon = new MapIcon({iconUrl: './assets/Essence_2.png'});
+        enemyIcon = new MapIcon({iconUrl: `./assets/Enemy.png`})
 
         L.icon = function (options) {
             return new L.Icon(options);
@@ -87,6 +89,7 @@
         var questLayer = L.layerGroup();
         var poiLayer = L.layerGroup();
         var collectablesLayer = L.layerGroup();
+        var enemyLayer = L.layerGroup();
 
 
         document.getElementById('campfire-filter').addEventListener('change', function() {
@@ -134,6 +137,14 @@
                 map.addLayer(collectablesLayer);
             } else {
                 map.removeLayer(collectablesLayer);
+            }
+        });
+
+        document.getElementById('enemy-filter').addEventListener('change', function() {
+            if (this.checked) {
+                map.addLayer(enemyLayer);
+            } else {
+                map.removeLayer(enemyLayer);
             }
         });
 
@@ -201,7 +212,7 @@
             L.marker([670, 588], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Sheten`),
 
             //Heifer's Reach
-            L.marker([1240, 795], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kersai Farmstead`),
+            L.marker([1230, 805], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kersai Farmstead`),
             L.marker([940, 835], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Traitor's Gate`),
 
             // COLLECTABLES
@@ -214,17 +225,20 @@
             L.marker([623, 440], {icon: collectablesIcon}).addTo(collectablesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift" target="_blank">Kethra's Gift</a>`), // western river thing 
 
 
-            // bloodseeker camp Anubite encampment
+            // MY OPPS/ BADDIEZ  
+            L.marker([499, 355], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Bloodseeker Camp`),
+            L.marker([570, 715], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Anubite Encampment`),
         ];
         // Tempt fix for no sidebar is the added links to Popups
 
         // Filter
-        campfireLayer.addTo(map);
-        scenesLayer.addTo(map);
+       campfireLayer.addTo(map);
+       scenesLayer.addTo(map);
        equipmentLayer.addTo(map);
-        questLayer.addTo(map);
-        poiLayer.addTo(map);
+       questLayer.addTo(map);
+       poiLayer.addTo(map);
        collectablesLayer.addTo(map);
+       enemyLayer.addTo(map);
 
     </script>
 </body>
