@@ -15,18 +15,25 @@ body, a {
     font-family: 'Roboto', sans-serif;
 }
 .leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
+.leaflet-popup-tip,
+.dropbtn {
     font-family: 'Roboto', sans-serif; /* Change 'Roboto' to your desired font */
 }
 
+body {
+  background-color: #e0e0e0;
+}
 /* Style the dropdown button */
 .dropbtn {
-    background-color: #F1D37D;
-    color: #333;
+    background-color: #121212;
+    color: #bdbdbd;
     padding: 16px;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    border: 2px solid #bdbdbd;
   }
   
   /* Style the dropdown content */

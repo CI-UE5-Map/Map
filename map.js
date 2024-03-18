@@ -31,7 +31,10 @@
     caveIcon = new MapIcon({iconUrl: './assets//Cave.png'}),
     poiIcon = new MapIcon({iconUrl: './assets/poi.png'}),
     collectablesIcon = new MapIcon({iconUrl: './assets/Essence_2.png'});
-    enemyIcon = new MapIcon({iconUrl: `./assets/Enemy.png`})
+    enemyIcon = new MapIcon({iconUrl: `./assets/Enemy.png`}),
+    merchantIcon = new MapIcon({iconUrl: `./assets/Merchent.png`}),
+    aadiIcon = new MapIcon({iconUrl: `./assets/Aadi.png`}),
+    undiscoveredIcon = new MapIcon({iconUrl: `./assets/Undiscovered.png`})
 
     L.icon = function (options) {
         return new L.Icon(options);
@@ -45,6 +48,7 @@
     var poiLayer = L.layerGroup();
     var collectablesLayer = L.layerGroup();
     var enemyLayer = L.layerGroup();
+    var npcLayer = L.layerGroup();
 
 
     document.getElementById('campfire-filter').addEventListener('change', function() {
@@ -100,6 +104,14 @@
             map.addLayer(enemyLayer);
         } else {
             map.removeLayer(enemyLayer);
+        }
+    });
+
+    document.getElementById('npc-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(npcLayer);
+        } else {
+            map.removeLayer(npcLayer);
         }
     });
 
@@ -183,6 +195,9 @@
         // MY OPPS/ BADDIEZ  
         L.marker([499, 355], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Bloodseeker Camp`),
         L.marker([570, 715], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Anubite Encampment`),
+
+        // NPCs
+        L.marker([500, 430], {icon: aadiIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Hakor" target="_blank">Hakor</a>`), //Aadie salesman
     ];
     // Tempt fix for no sidebar is the added links to Popups
 
@@ -194,3 +209,4 @@
    poiLayer.addTo(map);
    collectablesLayer.addTo(map);
    enemyLayer.addTo(map);
+   npcLayer.addTo(map);
