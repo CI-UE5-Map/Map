@@ -1,5 +1,5 @@
 #map {
-    height: 1000px;
+    height:91vh;
     width: 100% ;
 }
 #filter-controls {
@@ -29,7 +29,6 @@ body {
     color: #bdbdbd;
     padding: 16px;
     font-size: 18px;
-    border: none;
     cursor: pointer;
     font-weight: bold;
     border-radius: 2px;
