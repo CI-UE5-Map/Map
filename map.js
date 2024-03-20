@@ -22,6 +22,7 @@
     scenesIcon = new MapIcon({iconUrl: './assets/Sex.png'}),
     equipmentIcon = new MapIcon({iconUrl: './assets/ico-loot.png'}),
     questIcon = new MapIcon({iconUrl: './assets/Quest.png'}),
+    objectiveIcon = new MapIcon({iconUrl: './assets/QuestObjective.png'}),
     townIcon = new MapIcon({iconUrl: './assets/Town.png'}),
     fertilityIcon = new MapIcon({iconUrl: './assets/ShrineFertility.png'}),
     virilityIcon = new MapIcon({iconUrl: './assets/ShrineVirility.png'}),
@@ -32,7 +33,7 @@
     poiIcon = new MapIcon({iconUrl: './assets/poi.png'}),
     collectablesIcon = new MapIcon({iconUrl: './assets/Essence_2.png'});
     enemyIcon = new MapIcon({iconUrl: `./assets/Enemy.png`}),
-    merchantIcon = new MapIcon({iconUrl: `./assets/Merchent.png`}),
+    merchantIcon = new MapIcon({iconUrl: `./assets/Merchant.png`}),
     aadiIcon = new MapIcon({iconUrl: `./assets/Aadi.png`}),
     undiscoveredIcon = new MapIcon({iconUrl: `./assets/Undiscovered.png`})
 
@@ -157,7 +158,15 @@
         // QUESTS
         L.marker([615, 553], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`),
         L.marker([525, 326], {icon: questIcon}).addTo(questLayer).bindPopup(` Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`),
-        L.marker([610, 510], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a>`),
+        L.marker([610, 510], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>`),
+        L.marker([1168, 786], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest:https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
+        L.marker([1225, 710], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">SUntil Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`),
+
+        // Objectives
+        L.marker([386, 370], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Masquerader" target="_blank">Masquerade</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Shaken_Villager" target="_blank">Shaken Villager</a>`),
+        L.marker([1200, 725], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">SUntil Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Kemma" target="_blank">Kemma</a>`),
+
+
 
         // PoIs, {icon: can change}
         // TAL'SENENT   
@@ -215,6 +224,7 @@
         L.marker([1182, 823], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`),
         L.marker([1108, 790], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`),
         L.marker([1100, 760], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/WorriedVillager" target="_blank">Worried Villager</a>`),
+        L.marker([400, 585], {icon: merchantIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Damaris" target="_blank">Damaris</a>`),
 
     ];
     // Tempt fix for no sidebar is the added links to Popups
