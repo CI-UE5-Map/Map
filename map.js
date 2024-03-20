@@ -164,7 +164,7 @@
 
         // Objectives
         L.marker([386, 370], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Masquerader" target="_blank">Masquerade</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Shaken_Villager" target="_blank">Shaken Villager</a>`),
-        L.marker([1200, 725], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">SUntil Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Kemma" target="_blank">Kemma</a>`),
+        L.marker([1200, 725], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Kemma" target="_blank">Kemma</a>`),
 
 
 
