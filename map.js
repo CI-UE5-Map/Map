@@ -12,8 +12,8 @@
     options: {
         // im stilling messing with these
             iconSize:     [25, 25], // size of icon
-            iconAnchor:   [25, 25], // finer placement???
-            popupAnchor:  [-13,-30] // no clue
+            iconAnchor:   [15, 15], // finer placement???
+            popupAnchor:  [-3,-32] // popup 
         }
     });
 
@@ -129,7 +129,7 @@
         L.marker([545, 685], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //8 Pleasure Island
         L.marker([650, 515], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //9  Cloister of Nuriah 
         L.marker([580, 335], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //10 farmer's
-        L.marker([1040, 795], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //11 HR South
+        L.marker([1045, 785], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //11 HR South
         L.marker([1205, 740], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //12 HR North
         L.marker([305, 405], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //13 Pleaure Gardens
 
@@ -164,7 +164,7 @@
         L.marker([520, 600], {icon: fertilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`),
         L.marker([520, 605], {icon: virilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`),
         L.marker([470, 620], {icon: cosmeticIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Cosmetics</a>`),
-        L.marker([385, 593], {icon: villageIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a>`),
+        L.marker([396, 588], {icon: villageIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a>`),
         L.marker([375, 573], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Raqote`),
 
         // MEHDEN ISLAND
@@ -198,6 +198,24 @@
 
         // NPCs
         L.marker([500, 430], {icon: aadiIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Hakor" target="_blank">Hakor</a>`), //Aadie salesman
+        L.marker([1153, 806], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Cursed_Poet" target="_blank">Cursed Poet</a>`),
+        L.marker([1132, 833], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/CursedVillager" target="_blank">Cursed Villager</a>`), // horny stone guy
+        L.marker([1209, 799], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/FarakAshalia" target="_blank">Farak & Ashalia</a>`), // Chaos Option
+        L.marker([383, 565], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/FruitFarmer" target="_blank">Fruit Farmer</a>`), 
+        L.marker([1203, 850], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Fruit-ObsessedVillager" target="_blank">Fruit-Obsessed Villager</a>`), 
+        L.marker([370, 570], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jamila" target="_blank">Jamila</a>`),
+        L.marker([520, 400], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jeivad" target="_blank">Jeivad</a>`), 
+        L.marker([1220, 820], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mother&Father" target="_blank">Mother & Father</a>`), 
+        L.marker([396, 582], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Nenu" target="_blank">Nenu The Bard</a>`),
+        L.marker([1195, 740], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OldWoman" target="_blank">Old Woman</a>`),
+        L.marker([710, 480], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OphyxFarmer" target="_blank">Ohpyx Farmer</a>`),
+        L.marker([372, 563], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Rashan" target="_blank">Rashan</a>`),
+        L.marker([362, 577], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Tekem" target="_blank">Tekem</a>`),
+        L.marker([1177, 863], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(note)" target="_blank">Villager (Note)</a>`),
+        L.marker([1182, 823], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`),
+        L.marker([1108, 790], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`),
+        L.marker([1100, 760], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/WorriedVillager" target="_blank">Worried Villager</a>`),
+
     ];
     // Tempt fix for no sidebar is the added links to Popups
 
