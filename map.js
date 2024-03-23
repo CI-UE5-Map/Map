@@ -12,7 +12,7 @@
     options: {
         // im stilling messing with these
             iconSize:     [25, 25], // size of icon
-            iconAnchor:   [15, 15], // finer placement???
+            iconAnchor:   [15, 15], // what pixel is pinned to the map
             popupAnchor:  [-3,-32] // popup 
         }
     });
@@ -165,7 +165,6 @@
         L.marker([400, 585], {icon: merchantIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Damaris" target="_blank">Damaris</a>`),
 
     ];
-    // Tempt fix for no sidebar is the added links to Popups
 
     // Filter
    campfireLayer.addTo(map);
