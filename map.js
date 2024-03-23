@@ -95,7 +95,7 @@
         L.marker([615, 553], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`),
         L.marker([525, 326], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`),
         L.marker([610, 510], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>`),
-        L.marker([1173, 792], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
+        L.marker([1173, 792], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
         L.marker([1227, 700], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`),
 
         // Objectives
