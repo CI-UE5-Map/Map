@@ -56,19 +56,19 @@
     // Markers
     var markers = [
         // CAMPFIRES
-        L.marker([417, 540], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //1, Tal'Senet Coast
-        L.marker([450, 410], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //2 Mehden southeast coast
-        L.marker([406, 325], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //3 the Mehden Village 
-        L.marker([430, 280], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //4 Temple of Zulumun
-        L.marker([460, 615], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //5 Cosmetic
-        L.marker([405, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //6 Rampant Lioness
-        L.marker([525, 480], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //7  Moswen's
-        L.marker([555, 685], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //8 Pleasure Island
-        L.marker([650, 515], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //9  Cloister of Nuriah 
-        L.marker([580, 335], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //10 farmer's
-        L.marker([1045, 810], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire`), //11 HR South
-        L.marker([1215, 730], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //12 HR North
-        L.marker([305, 405], {icon: campIcon}).addTo(campfireLayer).bindPopup(`a campfire `), //13 Pleaure Gardens
+        L.marker([417, 540], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //1, Tal'Senet Coast
+        L.marker([450, 410], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //2 Mehden southeast coast
+        L.marker([406, 325], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //3 the Mehden Village 
+        L.marker([430, 280], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //4 Temple of Zulumun
+        L.marker([460, 615], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //5 Cosmetic
+        L.marker([405, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //6 Rampant Lioness
+        L.marker([525, 480], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //7  Moswen's
+        L.marker([555, 685], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //8 Pleasure Island
+        L.marker([650, 515], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //9  Cloister of Nuriah 
+        L.marker([580, 335], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //10 farmer's
+        L.marker([1045, 810], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //11 HR South
+        L.marker([1215, 730], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire `), //12 HR North
+        L.marker([305, 405], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire `), //13 Pleaure Gardens
 
 
         // SCENES combine centaur camp
@@ -93,9 +93,9 @@
 
         // QUESTS
         L.marker([615, 553], {icon: questIcon}).addTo(questLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`),
-        L.marker([525, 326], {icon: questIcon}).addTo(questLayer).bindPopup(` Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`),
+        L.marker([525, 326], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`),
         L.marker([610, 510], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>`),
-        L.marker([1168, 786], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest:https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
+        L.marker([1173, 792], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
         L.marker([1227, 700], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`),
 
         // Objectives
