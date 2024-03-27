@@ -50,3 +50,27 @@ body {
       display: block;
   }
 
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] + label {
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] + label img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+  }
+  
+  input[type="checkbox"]:checked + label img {
+    filter: grayscale(0%);
+  }
+  
+  input[type="checkbox"]:not(:checked) + label img {
+    filter: grayscale(100%);
+  }
+  
+  input[type="checkbox"]:not(:checked) + label {
+    text-decoration: line-through;
+  }
