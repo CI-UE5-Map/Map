@@ -166,6 +166,70 @@
 
     ];
 
+    document.getElementById('campfire-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(campfireLayer);
+        } else {
+            map.removeLayer(campfireLayer);
+        }
+    });
+
+    document.getElementById('scenes-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(scenesLayer);
+        } else {
+            map.removeLayer(scenesLayer);
+        }
+    });
+
+    document.getElementById('equipment-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(equipmentLayer);
+        } else {
+            map.removeLayer(equipmentLayer);
+        }
+    });
+
+    document.getElementById('quest-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(questLayer);
+        } else {
+            map.removeLayer(questLayer);
+        }
+    });
+
+    document.getElementById('poi-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(poiLayer);
+        } else {
+            map.removeLayer(poiLayer);
+        }
+    });
+
+    document.getElementById('collectables-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(collectablesLayer);
+        } else {
+            map.removeLayer(collectablesLayer);
+        }
+    });
+
+    document.getElementById('enemy-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(enemyLayer);
+        } else {
+            map.removeLayer(enemyLayer);
+        }
+    });
+
+    document.getElementById('npc-filter').addEventListener('change', function() {
+        if (this.checked) {
+            map.addLayer(npcLayer);
+        } else {
+            map.removeLayer(npcLayer);
+        }
+    });
+
     // Filter
    campfireLayer.addTo(map);
    scenesLayer.addTo(map);

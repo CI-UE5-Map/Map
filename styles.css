@@ -17,13 +17,13 @@ body, a {
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip,
 .dropbtn {
-    font-family: 'Roboto', sans-serif; /* Change 'Roboto' to your desired font */
+    font-family: 'Roboto', sans-serif; 
 }
 
 body {
   background-color: #e0e0e0;
 }
-/* Style the dropdown button */
+
 .dropbtn {
     background-color: #121212;
     color: #bdbdbd;
@@ -35,7 +35,7 @@ body {
     border: 2px solid #bdbdbd;
   }
   
-  /* Style the dropdown content */
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -45,13 +45,8 @@ body {
     z-index: 1;
   }
   
-  /* Show the dropdown content when the button is clicked */
-  .dropdown.open .dropdown-content {
-    display: block;
-    
-  }
   
-  /* Change styles on hover */
-  .dropdown-content label:hover {
-    background-color: #ddd;
+  .dropdown.open .dropdown-content {
+      display: block;
   }
+
