@@ -59,8 +59,8 @@ body {
   }
   
   input[type="checkbox"] + label img {
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
+    width: 20px; 
+    height: 20px; 
   }
   
   input[type="checkbox"]:checked + label img {
