@@ -83,5 +83,4 @@ body {
     background: linear-gradient(0deg, red, orange, green, blue, violet); /* Standard syntax */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  
   }
