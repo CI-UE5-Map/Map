@@ -101,7 +101,7 @@
         // Objectives
         L.marker([386, 370], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Masquerader" target="_blank">Masquerade</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Shaken_Villager" target="_blank">Shaken Villager</a>`),
         L.marker([1210, 715], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Kemma" target="_blank">Kemma</a>`),
-        L.marker([1228, 740], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/BeholdNew" target="_blank">Behold</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/AnubiteCaptain" target="_blank">Anubite Captain</a>`),
+        L.marker([1228, 740], {icon: objectiveIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Behold" target="_blank">Behold</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/AnubiteCaptain" target="_blank">Anubite Captain</a>`),
 
 
 
