@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: 5px;
+    }
+
+    .grid-item {
+      overflow: hidden;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container" id="grid-container">
+    <!-- Images will be loaded here using JavaScript -->
+  </div>
+  <script>
+    // JavaScript to dynamically create grid items with images
+    // Adjust the loop as per your needs
+    document.addEventListener("DOMContentLoaded", function() {
+      var gridContainer = document.getElementById("grid-container");
+      for (var i = 1; i < 64; i++) {
+        var gridItem = document.createElement("div");
+        gridItem.className = "grid-item";
+        var img = document.createElement("img");
+        img.src = "assets/5.15 tiles/" + i + ".PNG";
+        img.alt = "Image " + i;
+        gridItem.appendChild(img);
+        gridContainer.appendChild(gridItem);
+      }
+    });
+  </script>
+</body>
+</html>
