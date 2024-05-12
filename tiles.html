@@ -3,45 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Grid</title>
+  <title>Leaflet Tile Map</title>
+  <!-- Include Leaflet.js from a CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <style>
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-auto-rows: minmax(100px, auto);
-      gap: 5px;
-    }
-
-    .grid-item {
-      overflow: hidden;
-    }
-
-    .grid-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* Set the map container size */
+    #map {
+      height: 1000px;
     }
   </style>
 </head>
 <body>
-  <div class="grid-container" id="grid-container">
-    <!-- Images will be loaded here using JavaScript -->
-  </div>
+  <!-- Create a div for the map -->
+  <div id="map"></div>
   <script>
-    // JavaScript to dynamically create grid items with images
-    // Adjust the loop as per your needs
-    document.addEventListener("DOMContentLoaded", function() {
-      var gridContainer = document.getElementById("grid-container");
-      for (var i = 1; i < 65; i++) {
-        var gridItem = document.createElement("div");
-        gridItem.className = "grid-item";
-        var img = document.createElement("img");
-        img.src = "assets/5.15 tiles/" + i + ".PNG";
-        img.alt = "Image " + i;
-        gridItem.appendChild(img);
-        gridContainer.appendChild(gridItem);
-      }
-    });
+    // Initialize Leaflet map
+    var map = L.map('map').setView([0, 0], 1); // Set initial view and zoom level
+
+    // Add tile layer
+    L.tileLayer('assets/tiles/{x}-{y}.PNG', {
+      minZoom: 1, // Set minimum zoom level
+      maxZoom: 5, // Set maximum zoom level
+      tms: true // Enable Tile Map Service (TMS) mode
+    }).addTo(map);
   </script>
 </body>
 </html>
