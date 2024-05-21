@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Tile Map with Images</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .tile {
+            stroke: #999;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Define the dimensions and setup the SVG canvas
+        const width = 960;
+        const height = 600;
+        const tileSize = 64; // Adjust according to your tile size
+        const numRows = 8;
+        const numCols = 8;
+
+        const svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Generate the data array for the 8x8 grid
+        const data = [];
+        for (let row = 0; row < numRows; row++) {
+            for (let col = 0; col < numCols; col++) {
+                const tileNumber = row * numCols + col + 1;
+                data.push({
+                    row: row,
+                    col: col,
+                    tile: `${tileNumber}.PNG`
+                });
+            }
+        }
+
+        // Create a group for each tile
+        const tiles = svg.selectAll("g")
+            .data(data)
+            .enter().append("g")
+            .attr("class", "tile")
+            .attr("transform", d => `translate(${d.col * tileSize}, ${d.row * tileSize})`);
+
+        // Append the images to each tile group
+        tiles.append("image")
+            .attr("xlink:href", d => `assets/5.15 tiles/${d.tile}`)
+            .attr("width", tileSize)
+            .attr("height", tileSize);
+
+        // Optional: Add tile borders for better visibility
+        tiles.append("rect")
+            .attr("width", tileSize)
+            .attr("height", tileSize)
+            .attr("fill", "none")
+            .attr("stroke", "black");
+    </script>
+</body>
+</html>
