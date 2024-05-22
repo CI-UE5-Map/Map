@@ -15,9 +15,9 @@
 <body>
     <script>
         // Define the dimensions and setup the SVG canvas
-        const width = 960;
-        const height = 600;
-        const tileSize = 64; // Adjust according to your tile size
+        const width = 1024;
+        const height = 1024;
+        const tileSize = 128; // Adjust according to your tile size
         const numRows = 8;
         const numCols = 8;
 
@@ -47,16 +47,10 @@
 
         // Append the images to each tile group
         tiles.append("image")
-            .attr("xlink:href", d => `assets/5.15 tiles/${d.tile}`)
+            .attr("xlink:href", d => `assets/tiles/${d.tile}`)
             .attr("width", tileSize)
             .attr("height", tileSize);
 
-        // Optional: Add tile borders for better visibility
-        tiles.append("rect")
-            .attr("width", tileSize)
-            .attr("height", tileSize)
-            .attr("fill", "none")
-            .attr("stroke", "black");
     </script>
 </body>
 </html>
