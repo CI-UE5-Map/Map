@@ -23,7 +23,9 @@
 
         const svg = d3.select("body").append("svg")
             .attr("width", width)
-            .attr("height", height);
+            .attr("height", height)
+            .call(d3.zoom().on("zoom", zoomed))
+            .append("g");
 
         // Generate the data array for the 8x8 grid
         const data = [];
@@ -47,9 +49,14 @@
 
         // Append the images to each tile group
         tiles.append("image")
-            .attr("xlink:href", d => `assets/tiles/${d.tile}`)
+            .attr("xlink:href", d => `assets/5.15 tiles/${d.tile}`)
             .attr("width", tileSize)
             .attr("height", tileSize);
+
+        // Define the zoom function
+        function zoomed(event) {
+            svg.attr("transform", event.transform);
+        }
 
     </script>
 </body>
