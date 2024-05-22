@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D3.js Tile Map with Images</title>
+    <title>D3.js Tile Map with Images and Clickable Points</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         .tile {
             stroke: #999;
             stroke-width: 1px;
         }
+        .point-icon {
+            cursor: pointer;
+        }
+        .tooltip {
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            pointer-events: none;
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <div id="tooltip" class="tooltip"></div>
     <script>
         // Define the dimensions and setup the SVG canvas
         const width = 1024;
@@ -41,7 +53,7 @@
         }
 
         // Create a group for each tile
-        const tiles = svg.selectAll("g")
+        const tiles = svg.selectAll("g.tile")
             .data(data)
             .enter().append("g")
             .attr("class", "tile")
@@ -49,9 +61,42 @@
 
         // Append the images to each tile group
         tiles.append("image")
-            .attr("xlink:href", d => `assets/5.15 tiles/${d.tile}`)
+            .attr("xlink:href", d => `assets/tiles/${d.tile}`)
             .attr("width", tileSize)
             .attr("height", tileSize);
+
+        // Define points data with additional info and icon filenames
+        const pointsData = [
+            { x: 100, y: 150, info: "Point 1 Info", icon: "assets/Aadi.png" },
+            { x: 300, y: 200, info: "Point 2 Info", icon: "assets/Campfire.png" },
+            { x: 500, y: 500, info: "Point 3 Info", icon: "assets/Cave.png" },
+            // Add more points as needed, up to 17 icons
+        ];
+
+        // Create and append points as images to the SVG
+        const points = svg.selectAll("image.point-icon")
+            .data(pointsData)
+            .enter().append("image")
+            .attr("class", "point-icon")
+            .attr("xlink:href", d => d.icon)
+            .attr("width", 32)  // Adjust icon size as needed
+            .attr("height", 32)
+            .attr("x", d => d.x - 16)  // Center the icon
+            .attr("y", d => d.y - 16)  // Center the icon
+            .on("click", function(event, d) {
+                const tooltip = d3.select("#tooltip");
+                tooltip.style("left", `${event.pageX + 10}px`)
+                    .style("top", `${event.pageY + 10}px`)
+                    .style("display", "block")
+                    .html(d.info);
+            });
+
+        // Hide the tooltip when clicking outside of a point
+        d3.select("body").on("click", function(event) {
+            if (!event.target.classList.contains('point-icon')) {
+                d3.select("#tooltip").style("display", "none");
+            }
+        });
 
         // Define the zoom function
         function zoomed(event) {
