@@ -30,8 +30,8 @@
         const width = 1024;
         const height = 1024;
         const tileSize = 128; // Adjust according to your tile size
-        const numRows = 6;
-        const numCols = 6;
+        const numRows = 8;
+        const numCols = 8;
 
         const svg = d3.select("body").append("svg")
             .attr("width", width)
@@ -61,7 +61,7 @@
 
         // Append the images to each tile group
         tiles.append("image")
-            .attr("xlink:href", d => `assets/tiles/6x6/${d.tile}`)
+            .attr("xlink:href", d => `assets/tiles/${d.tile}`)
             .attr("width", tileSize)
             .attr("height", tileSize);
 
