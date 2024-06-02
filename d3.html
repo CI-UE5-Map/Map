@@ -18,12 +18,35 @@
             background: #fff;
             border: 1px solid #ccc;
             padding: 10px;
-            pointer-events: none;
+            pointer-events: auto;
             display: none;
+        }
+        #filter-controls img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
+    <div id="filter-controls">
+        <input type="checkbox" id="campfire-filter" checked>
+        <label for="campfire-filter"><img src="assets/Campfire.png" alt="Campfire"> Campfires</label><br>
+        <input type="checkbox" id="scenes-filter" checked>
+        <label for="scenes-filter"><img src="assets/Sex.png" alt="Scenes"> Scenes</label><br>
+        <input type="checkbox" id="collectables-filter" checked>
+        <label for="collectables-filter"><img src="assets/Essence_2.png" alt="Collectables"> Collectables</label><br>
+        <input type="checkbox" id="quest-filter" checked>
+        <label for="quest-filter"><img src="assets/Quest.png" alt="Quests"> Quests</label><br>
+        <input type="checkbox" id="poi-filter" checked>
+        <label for="poi-filter"><img src="assets/Town.png" alt="Town"> Points Of Interest</label><br>
+        <input type="checkbox" id="equipment-filter" checked>
+        <label for="equipment-filter"><img src="assets/ico-loot.png" alt="Chest"> Equipment</label><br>
+        <input type="checkbox" id="enemy-filter" checked>
+        <label for="enemy-filter"><img src="assets/Enemy.png" alt="Enemies"> Enemies</label><br>
+        <input type="checkbox" id="npc-filter" checked>
+        <label for="npc-filter"><img src="assets/Undiscovered.png" alt="Npcs"> NPCs</label>
+    </div>
     <div id="tooltip" class="tooltip"></div>
     <script>
         // Define the dimensions and setup the SVG canvas
@@ -39,7 +62,7 @@
             .call(d3.zoom().on("zoom", zoomed))
             .append("g");
 
-        // Generate the data array for the 8x8 grid
+        // Generate the data array for the 6x6 grid
         const data = [];
         for (let row = 0; row < numRows; row++) {
             for (let col = 0; col < numCols; col++) {
@@ -68,53 +91,42 @@
         // Define points data with additional info and icon filenames
         const pointsData = [
             // CAMPFIRES
-            //{ x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
-            // { x: 300, y: 200, info: "Campfire", icon: "assets/Campfire.png" },
+            { x: 100, y: 150, info: "Campfire", icon: "assets/Campfire.png", type: "campfire" },
 
             // SCENES
-            { x: 300, y: 200, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`, icon: "assets/Sex.png" },
+            { x: 300, y: 200, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`, icon: "assets/Sex.png", type: "scenes" },
 
-            // EQUIPMENT
+            // COLLECTABLES
+            { x: 500, y: 300, info: "Collectable Item", icon: "assets/Essence_2.png", type: "collectables" },
 
             // QUESTS
-            // SUB-QUESTS
+            { x: 700, y: 400, info: "Quest Location", icon: "assets/Quest.png", type: "quests" },
 
-            //POIS
-            //BULLS SHIELD
-            // HEIFERS REACH
-            // IKENNI VILLA
-            // MEHDEN ISLAND
-            // PLEASURE ISLAND
-            // TAL'SENET
-            // THE WESTLANDS
-            // KETHRA'S GIFT
+            // POINTS OF INTEREST
+            { x: 900, y: 500, info: "Point of Interest", icon: "assets/Town.png", type: "poi" },
+
+            // EQUIPMENT
+            { x: 200, y: 600, info: "Equipment Chest", icon: "assets/ico-loot.png", type: "equipment" },
+
+            // ENEMIES
+            { x: 400, y: 700, info: "Enemy Encounter", icon: "assets/Enemy.png", type: "enemies" },
+
+            // NPCs
+            { x: 600, y: 800, info: "NPC Location", icon: "assets/Undiscovered.png", type: "npcs" }
         ];
 
         // Create and append points as images to the SVG
         const points = svg.selectAll("image.point-icon")
             .data(pointsData)
             .enter().append("image")
-            .attr("class", "point-icon")
+            .attr("class", d => `point-icon ${d.type}`)
             .attr("xlink:href", d => d.icon)
             .attr("width", 16)  // Adjust icon size as needed
             .attr("height", 16)
             .attr("x", d => d.x - 16)  // Center the icon
             .attr("y", d => d.y - 16)  // Center the icon
             .on("click", function(event, d) {
+                event.stopPropagation();  // Prevent body click event
                 const tooltip = d3.select("#tooltip");
                 tooltip.style("left", `${event.pageX + 10}px`)
                     .style("top", `${event.pageY + 10}px`)
@@ -124,7 +136,7 @@
 
         // Hide the tooltip when clicking outside of a point
         d3.select("body").on("click", function(event) {
-            if (!event.target.classList.contains('point-icon')) {
+            if (!event.target.classList.contains('point-icon') && !event.target.closest('#tooltip')) {
                 d3.select("#tooltip").style("display", "none");
             }
         });
@@ -133,6 +145,31 @@
         function zoomed(event) {
             svg.attr("transform", event.transform);
         }
+
+        // Filter functionality
+        const filters = {
+            campfire: document.getElementById("campfire-filter"),
+            scenes: document.getElementById("scenes-filter"),
+            collectables: document.getElementById("collectables-filter"),
+            quests: document.getElementById("quest-filter"),
+            poi: document.getElementById("poi-filter"),
+            equipment: document.getElementById("equipment-filter"),
+            enemies: document.getElementById("enemy-filter"),
+            npcs: document.getElementById("npc-filter")
+        };
+
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener("change", updatePoints);
+        });
+
+        function updatePoints() {
+            Object.entries(filters).forEach(([type, checkbox]) => {
+                svg.selectAll(`.${type}`)
+                    .attr("display", checkbox.checked ? null : "none");
+            });
+        }
+
+        updatePoints();  // Initial call to set visibility based on initial checkbox states
 
     </script>
 </body>
