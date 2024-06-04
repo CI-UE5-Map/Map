@@ -90,29 +90,105 @@
 
         // Define points data with additional info and icon filenames
         const pointsData = [
-            // CAMPFIRES
-            { x: 100, y: 150, info: "Campfire", icon: "assets/Campfire.png", type: "campfire" },
+                // CAMPFIRES
+            { x: 417, y: 540, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //1, Tal'Senet Coast
+            { x: 450, y: 410, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //2 Mehden southeast coast
+            { x: 406, y: 325, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //3 the Mehden Village
+            { x: 430, y: 280, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //4 Temple of Zulumun
+            { x: 460, y: 615, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //5 Cosmetic
+            { x: 405, y: 585, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //6 Rampant Lioness
+            { x: 525, y: 480, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //7 Moswen's
+            { x: 555, y: 685, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //8 Pleasure Island
+            { x: 650, y: 515, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //9 Cloister of Nuriah
+            { x: 580, y: 335, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //10 farmer's
+            { x: 1045, y: 810, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //11 HR South
+            { x: 1215, y: 730, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //12 HR North
+            { x: 305, y: 405, info: `Campfire`, icon: "assets/Campfire.png", type: "campfire" }, //13 Pleaure Gardens
 
             // SCENES
-            { x: 300, y: 200, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`, icon: "assets/Sex.png", type: "scenes" },
-
-            // COLLECTABLES
-            { x: 500, y: 300, info: "Collectable Item", icon: "assets/Essence_2.png", type: "collectables" },
-
-            // QUESTS
-            { x: 700, y: 400, info: "Quest Location", icon: "assets/Quest.png", type: "quests" },
-
-            // POINTS OF INTEREST
-            { x: 900, y: 500, info: "Point of Interest", icon: "assets/Town.png", type: "poi" },
+            { x: 615, y: 512, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 386, y: 495, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Samia" target="_blank">Samia</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 303, y: 426, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Alkippe" target="_blank">Alkippe</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 305, y: 425, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Iva" target="_blank">Iva</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 305, y: 428, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Khyras" target="_blank">Khyras</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 520, y: 487, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Moswen" target="_blank">Moswen</a>`, icon: "assets/Sex.png", type: "scenes" },
+            { x: 563, y: 670, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Adept" target="_blank">The Adepts</a>`, icon: "assets/Sex.png", type: "scenes" },
 
             // EQUIPMENT
-            { x: 200, y: 600, info: "Equipment Chest", icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 720, y: 585, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Bows/Anubite_Bow" target="_blank">Anubite Bow</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 420, y: 615, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Lion_Blade" target="_blank">Lion Blade</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 515, y: 450, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Raider_Talon" target="_blank">Raider Talon</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 670, y: 430, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Viper's_Kiss" target="_blank">Viper's Kiss</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 380, y: 500, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/1h/Slaver's_Cudgel" target="_blank">Slaver's Cudgel</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 720, y: 588, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/2h/Legionnaire's_Kopis" target="_blank">Legionnaire's Kopis</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 450, y: 365, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Aadi's_Hide" target="_blank">Aadi's Hide</a>`, icon: "assets/ico-loot.png", type: "equipment" },
+            { x: 485, y: 365, info: `<a href="https://wiki.carnal-instinct.com/UE5/Weapons/Shields/Torment's_Vigil" target="_blank">Torment's Vigil</a>`, icon: "assets/ico-loot.png", type: "equipment" },
 
-            // ENEMIES
-            { x: 400, y: 700, info: "Enemy Encounter", icon: "assets/Enemy.png", type: "enemies" },
+            // QUESTS
+            { x: 615, y: 553, info: `<a href="https://wiki.carnal-instinct.com/UE5/Quests/IfItBleeds" target="_blank">If It Bleeds</a>`, icon: "assets/Quest.png", type: "quests" },
+            { x: 525, y: 326, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`, icon: "assets/Quest.png", type: "quests" },
+            { x: 610, y: 510, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>`, icon: "assets/Quest.png", type: "quests" },
+            { x: 1173, y: 792, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`, icon: "assets/Quest.png", type: "quests" },
+            { x: 1227, y: 700, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`, icon: "assets/Quest.png", type: "quests" },
+
+                // Objectives
+            { x: 386, y: 370, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Masquerader" target="_blank">Masquerade</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Shaken_Villager" target="_blank">Shaken Villager</a>`, icon: "assets/QuestObjective.png", type: "objectives" },
+            { x: 1210, y: 715, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Kemma" target="_blank">Kemma</a>`, icon: "assets/QuestObjective.png", type: "objectives" },
+            { x: 1228, y: 740, info: `Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/BeholdNew" target="_blank">Behold</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/AnubiteCaptain" target="_blank">Anubite Captain</a>`, icon: "assets/QuestObjective.png", type: "objectives" },
+
+            // Points of Interest (PoIs)
+            { x: 520, y: 600, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`, icon: "assets/ShrineFertility.png", type: "poi" },
+            { x: 520, y: 605, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`, icon: "assets/ShrineVirility.png", type: "poi" },
+            { x: 470, y: 620, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Cosmetics</a>`, icon: "assets/Cosmetic.png", type: "poi" },
+            { x: 396, y: 588, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a>`, icon: "assets/Village.png", type: "poi" },
+            { x: 375, y: 573, info: `Raqote`, icon: "assets/Village.png", type: "poi" },
+
+            { x: 410, y: 265, info: `Temple of Zulumun`, icon: "assets/Temple.png", type: "poi" },
+            { x: 414, y: 325, info: `Mehden Villlage`, icon: "assets/Town.png", type: "poi" },
+            { x: 580, y: 345, info: `Kehm Farmstead`, icon: "assets/Village.png", type: "poi" },
+            { x: 630, y: 370, info: `Abandoned Ruin`, icon: "assets/Temple.png", type: "poi" },
+            { x: 510, y: 405, info: `Animal Den`, icon: "assets/Cave.png", type: "poi" },
+            { x: 515, y: 400, info: `Forlorn Outlook`, icon: "assets/Temple.png", type: "poi" },
+            { x: 510, y: 487, info: `Desu Quay`, icon: "assets/Village.png", type: "poi" },
+            { x: 620, y: 510, info: `The Cloister of Nuriah`, icon: "assets/Temple.png", type: "poi" },
+            { x: 670, y: 588, info: `Sheten`, icon: "assets/Village.png", type: "poi" },
+
+            { x: 1230, y: 805, info: `Kersai Farmstead`, icon: "assets/Village.png", type: "poi" },
+            { x: 940, y: 835, info: `Traitor's Gate`, icon: "assets/Temple.png", type: "poi" },
+            
+            { x: 407, y: 622, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#talsenet" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 500, y: 420, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 520, y: 420, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 635, y: 375, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 520, y: 507, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 710, y: 580, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+            { x: 623, y: 440, info: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#mehden-island" target="_blank">Kethra's Gift</a>`, icon: "assets/Essence_2.png", type: "collectables" },
+
+            // Enemies
+            { x: 499, y: 355, info: `Bloodseeker Camp`, icon: "assets/Enemy.png", type: "enemies" },
+            { x: 570, y: 715, info: `Anubite Encampment`, icon: "assets/Enemy.png", type: "enemies" },
 
             // NPCs
-            { x: 600, y: 800, info: "NPC Location", icon: "assets/Undiscovered.png", type: "npcs" }
+            { x: 500, y: 430, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Hakor" target="_blank">Hakor</a>`, icon: "assets/Aadi.png", type: "npc" },
+            { x: 1153, y: 806, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Cursed_Poet" target="_blank">Cursed Poet</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1132, y: 833, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/CursedVillager" target="_blank">Cursed Villager</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1209, y: 799, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/FarakAshalia" target="_blank">Farak & Ashalia</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 383, y: 565, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/FruitFarmer" target="_blank">Fruit Farmer</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1203, y: 850, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Fruit-ObsessedVillager" target="_blank">Fruit-Obsessed Villager</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 370, y: 570, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jamila" target="_blank">Jamila</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 520, y: 400, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jeivad" target="_blank">Jeivad</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1220, y: 820, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mother&Father" target="_blank">Mother & Father</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 396, y: 582, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Nenu" target="_blank">Nenu The Bard</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1200, y: 725, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OldWoman" target="_blank">Old Woman</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 710, y: 480, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OphyxFarmer" target="_blank">Ohpyx Farmer</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 372, y: 563, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Rashan" target="_blank">Rashan</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 362, y: 577, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Tekem" target="_blank">Tekem</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1177, y: 863, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(note)" target="_blank">Villager (Note)</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1182, y: 823, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1108, y: 790, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 1100, y: 760, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/WorriedVillager" target="_blank">Worried Villager</a>`, icon: "assets/Undiscovered.png", type: "npc" },
+            { x: 400, y: 585, info: `<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Damaris" target="_blank">Damaris</a>`, icon: "assets/Merchant.png", type: "npc" },
+
         ];
 
         // Create and append points as images to the SVG
