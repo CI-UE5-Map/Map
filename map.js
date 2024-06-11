@@ -107,7 +107,7 @@
 
 
         // PoIs, {icon: can change}
-        // TAL'SENENT   
+        // TAL-SENENT   
         L.marker([520, 600], {icon: fertilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`),
         L.marker([520, 605], {icon: virilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`),
         L.marker([470, 620], {icon: cosmeticIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Cosmetics</a>`),
