@@ -58,7 +58,7 @@
         // CAMPFIRES
         L.marker([338, 790], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire  //1, Tal-Senet Coast`),
         L.marker([365, 675], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire  //2 Mehden southeast coast`),
-        L.marker([326, 605], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //3 the Mehden Village `), 
+        L.marker([326, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //3 the Mehden Village `), 
         L.marker([350, 560], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //4 Temple of Zulumun`),
         L.marker([370, 865], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //5 Ascension`),
         L.marker([330, 821], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //6 Rampant Lioness`),
@@ -115,24 +115,40 @@
             `),
 
         // MEHDEN ISLAND
-        // L.marker([350, 560], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Temple of Zulumun`),
-        // L.marker([326, 615], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Villlage`),
-        // L.marker([580, 345], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kehm Farmstead`),
-        // L.marker([630, 370], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Abandoned Ruin`),
-        // L.marker([510, 405], {icon: caveIcon}).addTo(poiLayer).bindPopup(`Animal Den`),
-        // L.marker([515, 400], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Forlorn Outlook`),
-        // L.marker([510, 487], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Desu Quay`),
+        L.marker([325, 537], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Temple of Zulumun`),
+        L.marker([326, 605], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Villlage`),
+        L.marker([460, 620], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kehm Farmstead`),
+        L.marker([500, 630], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Abandoned Ruin`), // one by the farmer
+        L.marker([590, 680], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Abandoned Ruin`), // one on the small island
+        L.marker([407, 665], {icon: caveIcon}).addTo(poiLayer).bindPopup(`Animal Den`),
+        L.marker([420, 655], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Forlorn Outlook <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jeivad" target="_blank">Jeivad</a>`),
+        L.marker([405, 740], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Desu Quay`),
         L.marker([500, 760], {icon: templeIcon}).addTo(poiLayer).bindPopup(`
             The Cloister of Nuriah <br>
             Sex Scene: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ameni" target="_blank">Priestess Ameni</a> <br>
             Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Shipwrecked_Anubites" target="_blank">Shipwrecked Anubites</a> <br> 
             NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>
             `),
-        // L.marker([670, 588], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Sheten`),
+        L.marker([538, 830], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Sheten`),
+        L.marker([300, 683], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Kab'alrah`),
 
         //Heifer's Reach
-        // L.marker([1230, 805], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kersai Farmstead`),
-        // L.marker([940, 835], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Traitor's Gate`),
+        L.marker([1285, 1025], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kersai Farmstead`),
+        L.marker([1055, 1050], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Traitor's Gate`),
+
+        //Bull's Shield
+        L.marker([380, 1010], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Hebse Village`),
+        L.marker([330, 1120], {icon: townIcon}).addTo(poiLayer).bindPopup(`The Glided Flod`),
+        L.marker([236, 1040], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Zakros Estate`),
+
+        // BreadBasket
+        L.marker([175, 648], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Ikenni Villa`),
+        L.marker([175, 603], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Ikenni Ruins`),
+
+        //The Westlands
+        L.marker([590, 590], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kusma`),
+        L.marker([560, 600], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kusma Farmstead`),
+        L.marker([650, 510], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Anubite Excavation`),
 
         // COLLECTABLES
         // L.marker([407, 622], {icon: collectablesIcon}).addTo(collectablesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Kethra's_Gift#talsenet" target="_blank">Kethra's Gift </a>`), // Tal'Senet
@@ -145,8 +161,11 @@
 
 
         // MY OPPS/ BADDIEZ  
-        // L.marker([499, 355], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Bloodseeker Camp`),
-        // L.marker([570, 715], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Anubite Encampment`),
+        L.marker([400, 619], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Bloodseeker Camp`), // south
+        L.marker([487, 730], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Bloodseeker Camp`), // north
+        L.marker([458, 945], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Anubite Encampment`),
+        L.marker([660, 630], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Karrow Rock`),
+        L.marker([290, 1000], {icon: enemyIcon}).addTo(enemyLayer).bindPopup(`Anubite Forward Camp`),
 
         // NPCs
         // L.marker([500, 430], {icon: aadiIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Hakor" target="_blank">Hakor</a>`), //Aadie salesman
@@ -154,12 +173,9 @@
         // L.marker([1132, 833], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/CursedVillager" target="_blank">Cursed Villager</a>`), // horny stone guy
         // L.marker([1209, 799], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/FarakAshalia" target="_blank">Farak & Ashalia</a>`), // Chaos Option
         // L.marker([1203, 850], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Fruit-ObsessedVillager" target="_blank">Fruit-Obsessed Villager</a>`), 
-        // L.marker([520, 400], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Jeivad" target="_blank">Jeivad</a>`), 
-        // L.marker([1220, 820], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mother&Father" target="_blank">Mother & Father</a>`), 
-        // L.marker([396, 582], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Nenu" target="_blank">Nenu The Bard</a>`),
+        // L.marker([1220, 820], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mother&Father" target="_blank">Mother & Father</a>`), ,
         // L.marker([1200, 725], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OldWoman" target="_blank">Old Woman</a>`),
         // L.marker([710, 480], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OphyxFarmer" target="_blank">Ohpyx Farmer</a>`),
-      
         // L.marker([1177, 863], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(note)" target="_blank">Villager (Note)</a>`),
         // L.marker([1182, 823], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`),
         // L.marker([1108, 790], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`),
