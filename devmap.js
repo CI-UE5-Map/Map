@@ -56,19 +56,19 @@
     // Markers
     var markers = [
         // CAMPFIRES
-        L.marker([338, 790], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire  //1, Tal-Senet Coast`),
-        L.marker([365, 675], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire  //2 Mehden southeast coast`),
-        L.marker([326, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //3 the Mehden Village `), 
-        L.marker([350, 560], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //4 Temple of Zulumun`),
-        L.marker([370, 865], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //5 Ascension`),
-        L.marker([330, 821], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //6 Rampant Lioness`),
-        L.marker([415, 730], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //7  Moswen's`),
-        L.marker([445, 915], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //8 Pleasure Island`),
-        L.marker([525, 765], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //9  Cloister of Nuriah`),
-        L.marker([460, 605], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //10 farmer's`), 
-        L.marker([1125, 1030], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //11 HR South`), 
-        L.marker([1270, 955], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //12 HR North`), 
-        L.marker([245, 665], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire //13 Pleaure Gardens`), 
+        L.marker([338, 790], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`),   //1 Tal-Senet Coast`),
+        L.marker([365, 675], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`),  //2 Mehden southeast coast`),
+        L.marker([326, 585], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //3 Mehden Village `), 
+        L.marker([350, 560], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //4 Temple of Zulumun`),
+        L.marker([370, 865], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //5 Ascension`),
+        L.marker([330, 821], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //6 Rampant Lioness`),
+        L.marker([415, 730], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //7  Moswen's`),
+        L.marker([445, 915], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //8 Pleasure Island`),
+        L.marker([525, 765], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //9  Cloister of Nuriah`),
+        L.marker([460, 605], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //10 farmer's`), 
+        L.marker([1125, 1030], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //11 HR South`), 
+        L.marker([1270, 955], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //12 HR North`), 
+        L.marker([245, 665], {icon: campIcon}).addTo(campfireLayer).bindPopup(`Campfire`), //13 Pleaure Gardens`), 
 
 
         // SCENES
@@ -96,13 +96,18 @@
         L.marker([430, 600], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/The_Prodigal_Son" target="_blank">The Prodigal Son</a> <br> NPC:<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Farmer" target="_blank">Farmer</a>`),
         L.marker([1245, 1005], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
         L.marker([1270, 935], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`),
+        L.marker([310, 1050], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Stuff_No-One_Thinks_About" target="_blank">The Stuff No One Thinks About</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Sotema" target="_blank">Wrangler Sotema</a>`),
+        L.marker([310, 1050], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Lost_and_Found" target="_blank">Lost and Found</a> <br> NPCs: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Temarah" target="_blank">Temarah</a> and <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ahmek" target="_blank">Ahmek</a>`),
 
 
         // PoIs, {icon: can change}
         // TAL-SENENT   
         L.marker([420, 840], {icon: fertilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Fertility_Shrine" target="_blank">Shrine of Fertility</a>`),
         L.marker([420, 845], {icon: virilityIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Virility_Shrine" target="_blank">Shrine of Virility</a>`),
-        L.marker([380, 855], {icon: cosmeticIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Ascension</a>`),
+        L.marker([380, 855], {icon: cosmeticIcon}).addTo(poiLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Ascension</a> <br>
+            NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Amara" target="_blank">Amara</a> <br>
+            Quests: <a href="https://wiki.carnal-instinct.com/UE5/Quests/ACallToAdventure" target="_blank">A Call To Adventure</a> then <a href="https://wiki.carnal-instinct.com/UE5/Quests/Avarice_of_Birds" target="_blank">The Avarice of Birds</a>
+            `),
         L.marker([318, 827], {icon: villageIcon}).addTo(poiLayer).bindPopup(`
             <a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a> <br>
             NPCS: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Damaris" target="_blank">Damaris</a> &
@@ -130,7 +135,9 @@
             NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Asim" target="_blank">Asim</a>
             `),
         L.marker([538, 830], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Sheten`),
-        L.marker([300, 683], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Kab'alrah`),
+        L.marker([300, 683], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Kab'alrah <br>
+            Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Depths_of_Kab'Alrah" target="_blank">Depths of Kab'Alrah</a>
+            Loot: <a href="https://wiki.carnal-instinct.com/UE5/Weapons/2h/Spirit_Catcher" target="_blank">Spirit Catcher</a>`),
 
         //Heifer's Reach
         L.marker([1285, 1025], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kersai Farmstead`),
@@ -138,15 +145,20 @@
 
         //Bull's Shield
         L.marker([380, 1010], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Hebse Village`),
-        L.marker([330, 1120], {icon: townIcon}).addTo(poiLayer).bindPopup(`The Glided Flod`),
+        L.marker([330, 1120], {icon: townIcon}).addTo(poiLayer).bindPopup(`The Glided Fold <br> 
+        NPCs: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Reseph" target="_blank">Herdmaster Reseph,</a> and <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Pharon" target="_blank">Stockwarden Pharon</a> <br>
+        Quests: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Welcome_to_the_Fold" target="_blank">Welcome to the Fold</a>`),
         L.marker([236, 1040], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Zakros Estate`),
 
         // BreadBasket
-        L.marker([175, 648], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Ikenni Villa`),
-        L.marker([175, 603], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Ikenni Ruins`),
+        L.marker([175, 648], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Ikenni Villa <br>
+            NPCs: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mera" target="_blank">Mera,</a> and <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Safiya" target="_blank">Safiya</a> <br>`),
+        L.marker([175, 603], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Ikenni Ruins <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Tabu" target="_blank">Sergeant Tabu</a>`),
 
         //The Westlands
-        L.marker([590, 590], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kusma`),
+        L.marker([590, 590], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kusma <br>
+            NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mesatnofreht" target="_blank">Mesatnofreht</a> <br>
+            Quests: <a href="https://wiki.carnal-instinct.com/UE5/Quests/No_Rest_For_The_Wicked" target="_blank">No Rest for the Wicked</a>`),
         L.marker([560, 600], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kusma Farmstead`),
         L.marker([650, 510], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Anubite Excavation`),
 
@@ -175,12 +187,14 @@
         L.marker([1257, 1060], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Fruit-ObsessedVillager" target="_blank">Fruit-Obsessed Villager</a>`), 
         L.marker([1280, 1040], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Mother&Father" target="_blank">Mother & Father</a>`), ,
         L.marker([1262, 950], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OldWoman" target="_blank">Old Woman</a>`),
-        L.marker([577, 730], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OphyxFarmer" target="_blank">Ohpyx Farmer</a>`),
+        L.marker([577, 730], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/OphyxFarmer" target="_blank">Ophyx Farmer</a>`),
         L.marker([1243, 1080], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(note)" target="_blank">Villager (Note)</a>`),
         L.marker([1249, 1039], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`),
         L.marker([1179, 1010], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`),
         L.marker([1210, 960], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/WorriedVillager" target="_blank">Worried Villager</a>`),
 
+        //Bull's Shield
+        L.marker([255, 998], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Anat_Hethet_Osu" target="_blank">Anat, Hethet & Osu</a>`),
     ];
 
     document.getElementById('campfire-filter').addEventListener('change', function() {
