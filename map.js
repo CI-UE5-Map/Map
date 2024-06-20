@@ -4,7 +4,7 @@
     });
 
     var bounds = [[0,0], [1500,1000]];
-    var image = L.imageOverlay('./assets/sabu-25.png', bounds).addTo(map); // this is making the image into the map
+    var image = L.imageOverlay('./assets/5-25-sabu.png', bounds).addTo(map); // this is making the image into the map
     map.fitBounds(bounds);
 
     // Making the Icons
