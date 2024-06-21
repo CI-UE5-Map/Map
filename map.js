@@ -97,7 +97,8 @@ var markers = [
     L.marker([1245, 1005], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/My_Brother's_Keeper" target="_blank">My Brother's Keeper</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_MBK" target="_blank">Villager</a>`),
     L.marker([1270, 935], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Until_Death" target="_blank">Until Death</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager_UD" target="_blank">Villager</a>`),
     L.marker([310, 1050], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Stuff_No-One_Thinks_About" target="_blank">The Stuff No One Thinks About</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Sotema" target="_blank">Wrangler Sotema</a>`),
-    L.marker([310, 1050], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Lost_and_Found" target="_blank">Lost and Found</a> <br> NPCs: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Temarah" target="_blank">Temarah</a> and <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ahmek" target="_blank">Ahmek</a>`),
+    L.marker([310, 1050], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Lost_and_Found" target="_blank">Lost and Found</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Temarah" target="_blank">Temarah</a>`),
+    L.marker([355, 975], {icon: questIcon}).addTo(questLayer).bindPopup(`Quest: <a href="https://wiki.carnal-instinct.com/UE5/Quests/Lost_and_Found" target="_blank">Lost and Found</a> <br> NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Ahmek" target="_blank">Ahmek</a>`),
 
 
     // PoIs, {icon: can change}
@@ -192,6 +193,8 @@ var markers = [
     L.marker([1249, 1039], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Trapped)" target="_blank">Villager (Trapped)</a>`),
     L.marker([1179, 1010], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Villager(Turn)" target="_blank">Villager (Turned)</a>`),
     L.marker([1210, 960], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/WorriedVillager" target="_blank">Worried Villager</a>`),
+    L.marker([570, 630], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Amonhoteph" target="_blank">Amonhoteph</a>`),
+    L.marker([460, 720], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Hermitess_Inquisitor" target="_blank">Hermitess</a>`),
 
     //Bull's Shield
     L.marker([255, 998], {icon: undiscoveredIcon}).addTo(npcLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Anat_Hethet_Osu" target="_blank">Anat, Hethet & Osu</a>`),
