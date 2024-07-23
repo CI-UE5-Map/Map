@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaflet Tile Map</title>
-  <!-- Include Leaflet.js from a CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <style>
-    /* Set the map container size */
-    #map {
-      height: 1000px;
-    }
-  </style>
+    <title>Leaflet Tile Map with Custom Images</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 100vh; }
+    </style>
 </head>
 <body>
-  <!-- Create a div for the map -->
-  <div id="map"></div>
-  <script>
-    // Initialize Leaflet map
-    var map = L.map('map').setView([3, 3], 1); // Set initial view and zoom level
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map and set its view
+        var map = L.map('map').setView([0, 0], 2);
 
-    // Add tile layer
-    L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
-      minZoom: 1, // Set minimum zoom level
-      maxZoom: 2, // Set maximum zoom level
-      tms: true, // Enable Tile Map Service (TMS) mode
-      noWrap: true,
-    }).addTo(map);
-  </script>
+        // Add custom tile layer
+        L.tileLayer('path/to/your/tiles/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            tileSize: 256,
+            zoomOffset: 0,
+            attribution: 'Your Attribution'
+        }).addTo(map);
+    </script>
 </body>
 </html>
