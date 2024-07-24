@@ -14,10 +14,10 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // Initialize the map and set its view
-        var map = L.map('map').setView([0, 0], 2);
+        var map = L.map('map').setView([0, 0], 1);
 
         // Add custom tile layer
-        L.tileLayer('path/to/your/tiles/{z}/{x}/{y}.png', {
+        L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
             maxZoom: 18,
             tileSize: 256,
             zoomOffset: 0,
