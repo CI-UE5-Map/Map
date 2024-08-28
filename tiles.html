@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>tilemap test</title>
+    <title>Tilemap Test</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map { height: 100vh; }
+        #coordinates {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
+    <div id="coordinates">Click on the map to get the coordinates</div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         // Initialize the map and set its view
-        const map = L.map('map').setView([0, 0], 2);
-
+        const map = L.map('map', {
+            maxZoom: 4,
+            minZoom: 1,
+            crs: L.CRS.Simple
+        }).setView([0, 0], 2);
 
         // Add custom tile layer
         L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
             maxZoom: 4,
             tileSize: 256,
             zoomOffset: 0,
-            attribution: 'Your Attribution',
             noWrap: true,
         }).addTo(map);
 
+        // Define custom icons for each image
+        const icons = [
+            L.icon({ iconUrl: 'assets/Aadi.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//0
+            L.icon({ iconUrl: 'assets/Cave.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//1
+            L.icon({ iconUrl: 'assets/Cosmetic.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//2
+            L.icon({ iconUrl: 'assets/Enemy.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//3
+            L.icon({ iconUrl: 'assets/Essence_2.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//4
+            L.icon({ iconUrl: 'assets/ico-loot.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//5
+            L.icon({ iconUrl: 'assets/Merchant.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//6
+            L.icon({ iconUrl: 'assets/Quest.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//7
+            L.icon({ iconUrl: 'assets/QuestObjective.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//8
+            L.icon({ iconUrl: 'assets/Sex.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//9
+            L.icon({ iconUrl: 'assets/ShrineFertility.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//10
+            L.icon({ iconUrl: 'assets/ShrineVirility.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//11
+            L.icon({ iconUrl: 'assets/Temple.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//12
+            L.icon({ iconUrl: 'assets/Town.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//13
+            L.icon({ iconUrl: 'assets/Village.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),//14
+        ];
 
+        // Example data for icons (add your actual coordinates, icon index, and text)
+        const locations = [
+            // TAL-SENENT 
+            { lat: -151.2500, lon:  123.5000, iconIndex: 2, text: `<a href="https://wiki.carnal-instinct.com/UE5/Locations/Cosmetic_Shrine" target="_blank">Shrine of Ascension</a> <br>
+        NPC: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Amara" target="_blank">Amara</a> <br>
+        Quests: <a href="https://wiki.carnal-instinct.com/UE5/Quests/ACallToAdventure" target="_blank">A Call To Adventure</a> then <a href="https://wiki.carnal-instinct.com/UE5/Quests/Avarice_of_Birds" target="_blank">The Avarice of Birds</a>` },
+            { lat: -159.5000, lon: 120.3125, iconIndex: 14, text: `
+        <a href="https://wiki.carnal-instinct.com/UE5/Locations/Rampant_Lioness" target="_blank">Rampant Lioness</a> <br>
+        NPCS: <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Damaris" target="_blank">Damaris</a> &
+        <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Nenu" target="_blank">Nenu The Bard</a>
+         ` },
+            { lat: -18.5000, lon: 120.3125, iconIndex: 2, text: "Popup Text 3" },
+        ];
+
+        // Add markers to the map using the corresponding icons
+        locations.forEach(loc => {
+            L.marker([loc.lat, loc.lon], { icon: icons[loc.iconIndex] })
+                .bindPopup(loc.text)
+                .addTo(map);
+        });
+
+        // Display latitude and longitude on click
+        map.on('click', function(e) {
+            const lat = e.latlng.lat.toFixed(4);
+            const lon = e.latlng.lng.toFixed(4);
+            const coordinates = `Latitude: ${lat}, Longitude: ${lon}`;
+
+            // Display coordinates in a popup
+            L.popup()
+                .setLatLng(e.latlng)
+                .setContent(coordinates)
+                .openOn(map);
+
+            // Optionally display coordinates in the div
+            document.getElementById('coordinates').innerText = coordinates;
+        });
     </script>
 </body>
 </html>
