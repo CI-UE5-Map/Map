@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">Filter</button>
+        <div id="filter-controls" class="dropdown-content">
+            <input type="checkbox" id="campfire-filter" checked>
+            <label for="campfire-filter"><img src="assets/Campfire.png" alt="Campfire"> Campfires</label><br>
+            <input type="checkbox" id="scenes-filter" checked>
+            <label for="scenes-filter"><img src="assets/Sex.png" alt="Scenes"> Scenes</label><br>
+            <input type="checkbox" id="collectables-filter" checked>
+            <label for="collectables-filter"><img src="assets/Essence_2.png" alt="Collectables">Collectables</label><br>
+            <input type="checkbox" id="quest-filter" checked>
+            <label for="quest-filter"><img src="assets/Quest.png" alt="Quests">Quests</label><br>
+            <input type="checkbox" id="poi-filter" checked>
+            <label for="poi-filter"><img src="assets/Town.png" alt="Town">Points Of Interest</label><br>
+            <input type="checkbox" id="equipment-filter" checked>
+            <label for="equipment-filter"><img src="assets/ico-loot.png" alt="Chest">Equipment</label> <br>
+            <input type="checkbox" id="enemy-filter" checked>
+            <label for="enemy-filter"><img src="assets/Enemy.png" alt="Enemies">Enemies</label> <br>
+            <input type="checkbox" id="npc-filter" checked>
+            <label for="npc-filter"><img src="assets/Undiscovered.png" alt="Npcs">NPCs</label> 
+    </div>
+    </div>
+    <div id="map"></div>
+    <script src="map.js"></script>
+    <script src="dropdown.js"></script>
+</body>
+</html>

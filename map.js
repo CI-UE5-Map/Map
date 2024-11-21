@@ -72,7 +72,7 @@ var markers = [
 
 
     // SCENES
-    L.marker([316, 745], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Samia" target="_blank">Samia</a> `),
+    L.marker([316, 745], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`<a href="https://wiki.carnal-instinct.com/UE5/NPCs/Samia" target="_blank">Samia</a>`),
     L.marker([245, 683], {icon: scenesIcon}).addTo(scenesLayer).bindPopup(`
         <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Khyras" target="_blank">Khyras</a> <br> 
         <a href="https://wiki.carnal-instinct.com/UE5/NPCs/Iva" target="_blank">Iva</a> <br> 
@@ -122,7 +122,7 @@ var markers = [
 
     // MEHDEN ISLAND
     L.marker([325, 537], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Temple of Zulumun`),
-    L.marker([326, 605], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Villlage`),
+    L.marker([326, 605], {icon: townIcon}).addTo(poiLayer).bindPopup(`Mehden Village`),
     L.marker([460, 620], {icon: villageIcon}).addTo(poiLayer).bindPopup(`Kehm Farmstead`),
     L.marker([500, 630], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Abandoned Ruin`), // one by the farmer
     L.marker([590, 680], {icon: templeIcon}).addTo(poiLayer).bindPopup(`Abandoned Ruin`), // one on the small island
