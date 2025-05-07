@@ -26,14 +26,14 @@
     <script>
         // Initialize the map and set its view
         const map = L.map('map', {
-            maxZoom: 4,
-            minZoom: 1,
+            maxZoom: 5,
+            minZoom: 0,
             crs: L.CRS.Simple
         }).setView([ -140, 110], 2);
 
         // Add custom tile layer
-        L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
-            maxZoom: 4,
+        L.tileLayer('assets/tiles/new/{z}/{x}/{y}.png', {
+            maxZoom: 5,
             tileSize: 256,
             zoomOffset: 0,
             noWrap: true,
